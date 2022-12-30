@@ -17,7 +17,7 @@ CREATE TABLE Orders
 orderid INT NOT NULL,
 custid CHAR(5) NULL,
 CONSTRAINT PK_Orders PRIMARY KEY(orderid),
-CONSTRAINT FK_Customers PRIMARY KEY(custid)
+CONSTRAINT FK_Customers FOREIGN KEY(custid)
     REFERENCES Customers(custid)
 );
 GO
